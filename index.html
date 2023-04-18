@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
-  <body class="bg-white font-inter text-black">
+  <body class="bg-white font-inter text-black max-w-[100vw] overflow-x-hidden">
     <!-- NAV -->
     <nav class="mb-8 md:mb-4">
       <!-- global container -->
@@ -58,11 +58,18 @@
             Login
           </button>
         </div>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="block hamburger lg:hidden" type="button">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
       </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="mb-16 lg:mb-4">
+    <header>
       <!-- global container -->
       <div class="glb-cont items-center md:flex">
         <!-- flex item 1 -->
@@ -121,16 +128,695 @@
             <p class="text-2xl">4.0</p>
           </div>
 
-          <p class="text-center text-xl md:text-left lg:text-2xl">
+          <p class="mb-8 text-center text-xl md:text-left lg:text-2xl">
             20K+ <span class="text-lg text-blk-500 lg:text-xl">Reviews</span>
           </p>
         </div>
 
         <!-- hero-img -->
-        <div class="hidden basis-1/2 md:block">
+        <div class="hidden basis-1/2 self-end md:block">
           <img src="./images/hero-img.png" alt="" />
         </div>
       </div>
     </header>
+
+    <!-- STATS SECTION -->
+    <section class="bg-bg-2 mb-10 py-6 sm:mb-20">
+      <div class="glb-cont">
+        <div
+          class="max-w-4xl mx-auto justify-between space-y-4 sm:flex sm:space-y-0"
+        >
+          <!-- single stat -->
+          <div class="max-w-max mx-auto sm:mx-0">
+            <h2 class="text-[2.5rem]">2M+</h2>
+            <p class="text-blk-500 text-xl">
+              Satisfied <br />
+              Customers.
+            </p>
+          </div>
+          <!-- single stat -->
+          <div class="max-w-max mx-auto sm:mx-0">
+            <h2 class="text-[2.5rem]">7+</h2>
+            <p class="text-blk-500 text-xl">
+              Years of <br />
+              Experience.
+            </p>
+          </div>
+          <!-- single stat -->
+          <div class="max-w-max mx-auto sm:mx-0">
+            <h2 class="text-[2.5rem]">0%</h2>
+            <p class="text-blk-500 text-xl">
+              Transaction <br />
+              Fee.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="mb-16 lg:mb-44">
+      <!-- global container -->
+      <div class="glb-cont flex-row-reverse flex-wrap gap-8 md:flex lg:gap-16">
+        <!-- global item 1 -->
+        <div
+          class="basis-[calc(50%-1rem)] lg:basis-[calc(50%-2.5rem)] self-end"
+        >
+          <h2 class="mb-10">How it Works</h2>
+          <!-- working steps -->
+          <div class="mb-8 flex gap-4 items-start">
+            <p class="bg-black px-3 py-1 text-white rounded-full">1</p>
+            <div class="space-y-4">
+              <h3 class="text-2xl lg:text-3xl font-medium">
+                Create an account
+              </h3>
+              <p class="text-lg text-blk-500 lg:text-xl">
+                Provide us with your personal information
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-8 flex gap-4 items-start">
+            <p class="bg-black px-3 py-1 text-white rounded-full">2</p>
+            <div class="space-y-4">
+              <h3 class="text-2xl lg:text-3xl font-medium">Connect card</h3>
+              <p class="text-lg text-blk-500 lg:text-xl">
+                Connect your cards with a few steps to sync account
+              </p>
+            </div>
+          </div>
+
+          <div class="mb-11 flex gap-4 items-start">
+            <p class="bg-black px-3 py-1 text-white rounded-full">3</p>
+            <div class="space-y-4">
+              <h3 class="text-2xl lg:text-3xl font-medium">Success</h3>
+              <p class="text-lg text-blk-500 lg:text-xl">
+                Set up is complete to make transactions
+              </p>
+            </div>
+          </div>
+          <!-- action button -->
+          <button class="btn">Get Started</button>
+        </div>
+
+        <!-- global item 2 -->
+        <div
+          class="max-w-max mx-auto basis-[calc(50%-1rem)] lg:max-w-none lg:mx-auto lg:basis-[calc(50%-2.5rem)]"
+        >
+          <!-- image container -->
+          <div class="relative max-w-max">
+            <div class="absolute w-full h-2/5 bg-bg-3 bottom-0 left-0"></div>
+            <img
+              src="./images/istockphoto-1.png"
+              alt="satisfied man"
+              class="relative"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="mb-20 lg:mb-40">
+      <!-- global container -->
+      <div class="glb-cont space-y-16">
+        <h2 class="text-center">Features</h2>
+
+        <!-- features container -->
+        <div class="space-y-6 gap-4 justify-between md:flex md:space-y-0">
+          <!-- single feature -->
+          <div
+            class="max-w-max mx-auto px-16 pt-6 pb-12 bg-black text-white text-center flex items-center rounded-2xl flex-col"
+          >
+            <div
+              class="bg-white w-16 h-16 mb-4 flex justify-center items-center rounded-full"
+            >
+              <img src="./images/money-icon.png" alt="dollar" />
+            </div>
+            <p class="max-w-[12rem] text-2xl mb-4 text-center md:max-w-none">
+              Zero transaction cost
+            </p>
+            <p class="max-w-[12.5rem]">
+              You pay zero charges fee for every transaction
+            </p>
+          </div>
+
+          <!-- single feature -->
+          <div
+            class="max-w-max mx-auto px-16 pt-6 pb-12 bg-black text-white text-center flex items-center rounded-2xl flex-col"
+          >
+            <div
+              class="bg-white w-16 h-16 mb-4 flex justify-center items-center rounded-full"
+            >
+              <img src="./images/message-icon.png" alt="chat icon" />
+            </div>
+            <p class="text-2xl mb-4">24/7 Support</p>
+            <p class="max-w-[12.5rem]">
+              We provide you with <br />
+              24 hours real time support <br />
+              all through the week.
+            </p>
+          </div>
+          <!-- single feature -->
+          <div
+            class="max-w-max mx-auto px-16 pt-6 pb-12 bg-black text-white text-center flex items-center rounded-2xl flex-col"
+          >
+            <div
+              class="bg-white w-16 h-16 mb-4 flex justify-center items-center rounded-full"
+            >
+              <img src="./images/global-icon.png" alt="dollar" />
+            </div>
+            <p class="text-2xl mb-4">Global payment</p>
+            <p class="max-w-[12.5rem]">
+              Send money across <br />
+              borders at zero <br />
+              charges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATE ACCOUNT SECTION -->
+    <section class="mb-8 md:mb-20 lg:mb-44">
+      <!-- global container -->
+      <div class="glb-cont justify-between items-center md:flex">
+        <!-- global item 1 -->
+        <div class="basis-1/2">
+          <h1
+            class="mx-auto mb-9 text-center text-3xl font-bold text-blk-900 md:mx-0 md:max-w-[25rem] md:text-left lg:text-4xl"
+          >
+            A fast and secure way for any cross boder transaction
+          </h1>
+          <p
+            class="mx-auto mb-12 max-w-sm text-center text-blk-900 md:mx-0 md:text-left lg:text-xl"
+          >
+            With Monee, your clients are assured of a seamless way to receive
+            and send money across multiple payment options.
+          </p>
+          <button class="btn mx-auto mb-12 block md:mx-0 lg:mb-20">
+            Create account
+          </button>
+        </div>
+
+        <!-- global item 2 -->
+        <div class="hidden max-w-max md:block basis-1/2">
+          <!-- image container -->
+          <div class="relative px-11">
+            <div class="absolute w-full h-2/3 bg-bg-4 bottom-0 left-0"></div>
+            <img
+              src="./images/iphone-13-pro.png"
+              alt="iphone 13 pro"
+              class="relative"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="mb-8 lg:mb-48">
+      <!-- global container -->
+      <div
+        class="glb-cont items-start flex-row-reverse gap-10 lg:flex xl:gap-16 xl:items-end"
+      >
+        <!-- global item 1 -->
+        <div class="space-y-8 sm:space-y-0 gap-4 flex-wrap sm:flex">
+          <!-- single benefit -->
+          <div
+            class="pt-9 pb-11 px-5 max-w-md mx-auto basis-[calc(50%-1rem)] flex gap-4 items-start border border-blk-500 rounded-xl sm:mx-none"
+          >
+            <!-- icon container -->
+            <div class="flex-none">
+              <img src="./images/security-user-icon.png" alt="" />
+            </div>
+            <div class="space-y-7">
+              <h3 class="text-lg lg:text-xl font-semiboldld">
+                Guaranteed safety
+              </h3>
+              <p class="text-sm text-blk-500 lg:text-base">
+                Your user data are protected on the app with enhanced card
+                control,data security and security measures.
+              </p>
+            </div>
+          </div>
+
+          <!-- single benefit -->
+          <div
+            class="pt-9 pb-11 px-5 max-w-md mx-auto basis-[calc(50%-1rem)] flex gap-4 items-start border border-blk-500 rounded-xl sm:mx-none"
+          >
+            <!-- icon container -->
+            <div class="flex-none flex">
+              <img src="./images/wallet-icon.png" alt="" />
+            </div>
+            <div class="space-y-7">
+              <h3 class="text-lg lg:text-xl font-semiboldld">
+                Seemless transaction
+              </h3>
+              <p class="text-sm text-blk-500 lg:text-base">
+                Monee has been designed to enable you run transactions smoothly
+                with easy to use and under
+              </p>
+            </div>
+          </div>
+
+          <!-- single benefit -->
+          <div
+            class="pt-9 pb-11 px-5 max-w-md mx-auto basis-[calc(50%-1rem)] flex gap-4 items-start border border-blk-500 rounded-xl sm:mx-none"
+          >
+            <!-- icon container -->
+            <div class="flex-none flex">
+              <img src="./images/message-icon-2.png" alt="" />
+            </div>
+            <div class="space-y-7">
+              <h3 class="text-lg lg:text-xl font-semiboldld">
+                AI Powered Chatbot
+              </h3>
+              <p class="text-sm text-blk-500 lg:text-base">
+                The Chatbot feature can process multiple incoming
+                requests,reducing response waiting time from an hour to seconds.
+              </p>
+            </div>
+          </div>
+
+          <!-- single benefit -->
+          <div
+            class="pt-9 pb-11 px-5 max-w-md mx-auto basis-[calc(50%-1rem)] flex gap-4 items-start border border-blk-500 rounded-xl sm:mx-none"
+          >
+            <!-- icon container -->
+            <div class="flex-none flex">
+              <img src="./images/money-send-icon.png" alt="" />
+            </div>
+            <div class="space-y-7">
+              <h3 class="text-lg lg:text-xl font-semiboldld">Spend anywhere</h3>
+              <p class="text-sm text-blk-500 lg:text-base">
+                Use your debit card anywhere, anytime at our convenience with no
+                extra fee attached to any transaction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- global item 2 -->
+        <div
+          class="max-w-max mx-auto flex-none basis-[calc(40%-1.5rem)] lg:basis-[calc(40%-2rem)] xl:max-w-none lg:mx-0"
+        >
+          <!-- image container -->
+          <div class="relative max-w-max">
+            <div class="absolute w-full h-2/5 bg-bg-5 bottom-0 left-0"></div>
+            <img
+              src="./images/happy-woman-photography-world-black.png"
+              alt="satisfied man"
+              class="relative"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONITOR TRANSACTIONS -->
+    <section class="mb-8 md:mb-20 lg:mb-32">
+      <!-- global container -->
+      <div class="glb-cont justify-between items-center md:flex">
+        <!-- global item 1 -->
+        <div class="basis-1/2">
+          <h1
+            class="mx-auto mb-9 text-center text-3xl font-bold text-blk-900 md:mx-0 md:max-w-[25rem] md:text-left lg:text-4xl"
+          >
+            Monitor transactions
+          </h1>
+          <p
+            class="mx-auto mb-12 max-w-sm text-center text-blk-900 md:mx-0 md:text-left lg:text-xl"
+          >
+            It helps in budgeting, spending, savings etc by pulling all data
+            from links institutions.
+          </p>
+          <button class="btn mx-auto mb-12 block md:mx-0 lg:mb-20">
+            Learn more
+          </button>
+        </div>
+
+        <!-- global item 2 -->
+        <div class="max-w-max mx-auto flex-none basis-1/2 md:mx-0">
+          <img src="./images/iphone-card-chart-store.PNG" alt="iphone 13 pro" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="mb-8 md:mb-20 lg:mb-32">
+      <!-- global container -->
+      <div
+        class="glb-cont justify-between items-center gap-10 flex-row-reverse md:flex xl:gap-40"
+      >
+        <!-- content container -->
+        <div
+          class="mb-10 basis-[calc(50%-1.5rem)] flex-none xl:basis-[calc(50%-5rem)] md:mb-0"
+        >
+          <h2 class="mb-11 font-semibold">Frequently asked questions</h2>
+          <!-- single question -->
+          <div
+            class="mb-8 px-3 group border-b cursor-pointer lg:text-xl"
+            tabindex="1"
+          >
+            <p
+              class="mb-2 flex justify-between group-hover:text-gray-500 group-focus:font-bold"
+            >
+              How safe is Monee?
+              <img
+                src="./images/arrow-down.png"
+                alt="arrow down"
+                class="group-focus:rotate-180"
+              />
+            </p>
+            <p
+              class="max-h-0 overflow-hidden duration-500 group-focus:max-h-screen"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              laboriosam eius quos veritatis iste fugit rerum eos autem, facere
+              quae, eaque repudiandae exercitationem dignissimos odit excepturi
+              a fuga enim officiis.
+            </p>
+          </div>
+          <!-- single question -->
+          <div
+            class="mb-8 px-3 group border-b cursor-pointer lg:text-xl"
+            tabindex="2"
+          >
+            <p
+              class="mb-2 flex justify-between group-hover:text-gray-500 group-focus:font-bold"
+            >
+              How do i get a physical card?
+              <img
+                src="./images/arrow-down.png"
+                alt="arrow down"
+                class="group-focus:rotate-180"
+              />
+            </p>
+            <p
+              class="max-h-0 overflow-hidden duration-500 group-focus:max-h-screen"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate in nihil ratione delectus ullam quasi qui quos soluta
+              quibusdam architecto!
+            </p>
+          </div>
+          <!-- single question -->
+          <div
+            class="mb-8 px-3 group border-b cursor-pointer lg:text-xl"
+            tabindex="3"
+          >
+            <p
+              class="mb-2 flex justify-between group-hover:text-gray-500 group-focus:font-bold"
+            >
+              Any physical branch available?
+              <img
+                src="./images/arrow-down.png"
+                alt="arrow down"
+                class="group-focus:rotate-180"
+              />
+            </p>
+            <p
+              class="max-h-0 overflow-hidden duration-500 group-focus:max-h-screen"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam aperiam minima consectetur inventore maiores nisi, iste
+              ea officia magnam a quam ratione tenetur incidunt temporibus!
+            </p>
+          </div>
+          <!-- single question -->
+          <div
+            class="mb-8 px-3 group border-b cursor-pointer lg:text-xl"
+            tabindex="4"
+          >
+            <p
+              class="mb-2 flex justify-between group-hover:text-gray-500 group-focus:font-bold"
+            >
+              Who are our partners?
+              <img
+                src="./images/arrow-down.png"
+                alt="arrow down"
+                class="group-focus:rotate-180"
+              />
+            </p>
+            <p
+              class="max-h-0 overflow-hidden duration-500 group-focus:max-h-screen"
+            >
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              autem perferendis veritatis at repudiandae blanditiis ipsam quia
+              maxime dicta consectetur voluptate deleniti quasi suscipit, rerum
+              officia nobis accusantium temporibus exercitationem!
+            </p>
+          </div>
+        </div>
+
+        <!-- image container  -->
+        <div
+          class="basis-[calc(50%-1.5rem)] flex-none xl:basis-[calc(50%-5rem)]"
+        >
+          <img
+            src="./images/girl-needs-make-up-excuse-thinking-standing-focused-thoughtful-pose.png"
+            alt="girl thinking to make up excuses"
+            class="basis-[calc(50%-1.5rem)] flex-none xl:basis-[calc(50%-5rem)]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- USER TESTIMONIALS -->
+    <section class="mb-8 md:mb-16 lg:mb-32">
+      <!-- global container -->
+      <div class="glb-cont">
+        <h2 class="mb-16 text-center font-semibold">What our users say</h2>
+        <div class="gap-7 lg:grid items-center grid-cols-[auto_1fr_auto]">
+          <!-- arrow left -->
+          <svg
+            class="hidden lg:block"
+            width="10"
+            height="16"
+            viewBox="0 0 10 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.2541 0.241064C9.55216 0.533264 9.57926 0.990508 9.33539 1.31272L9.2541 1.40503L2.52658 8L9.2541 14.595C9.55216 14.8872 9.57926 15.3444 9.33539 15.6666L9.2541 15.7589C8.95604 16.0511 8.48963 16.0777 8.16096 15.8386L8.06679 15.7589L0.745899 8.58198C0.44784 8.28978 0.420743 7.83254 0.66461 7.51033L0.745899 7.41802L8.06679 0.241064C8.39466 -0.0803548 8.92624 -0.0803548 9.2541 0.241064Z"
+              fill="currentColor"
+            />
+          </svg>
+          <!-- testimonials container -->
+          <div class="lg:space-y-16">
+            <div class="space-y-4 gap-4 justify-between lg:flex lg:space-y-0">
+              <!-- single testimonial -->
+              <div
+                class="max-w-md mx-auto px-5 pt-12 pb-10 flex flex-col gap-16 justify-between text-blk-500 border border-blk-500 lg:max-w-max lg:mx-0"
+              >
+                <p class="lg:max-w-[17.5rem]">
+                  Sending money abroad just got easy with the monee app.
+                </p>
+                <div class="flex gap-4 items-start">
+                  <!-- image container -->
+                  <div
+                    class="w-12 h-12 rounded-full bg-davio bg-center bg-cover"
+                  ></div>
+                  <div class="w-[calc(100%-4rem)]">
+                    <h4 class="mb-1 text-base font-semibold">Davio White</h4>
+                    <div class="flex justify-between">
+                      <p class="text-sm">Designer</p>
+                      <!-- star container -->
+                      <div class="flex">
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single testimonial -->
+              <div
+                class="max-w-md mx-auto px-5 pt-12 pb-10 flex flex-col gap-16 justify-between text-blk-500 border border-blk-500 lg:max-w-max lg:mx-0"
+              >
+                <p class="lg:max-w-[17.5rem]">
+                  Ever since I discovered the app,its has been such a seemless
+                  way to make payment.
+                </p>
+                <div class="flex gap-4 items-start">
+                  <!-- image container -->
+                  <div
+                    class="w-12 h-12 rounded-full bg-james bg-center bg-cover"
+                  ></div>
+                  <div class="w-[calc(100%-4rem)]">
+                    <h4 class="mb-1 text-base font-semibold">James Brown</h4>
+                    <div class="flex justify-between">
+                      <p class="text-sm">Product Manager</p>
+                      <!-- star container -->
+                      <div class="flex">
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- single testimonial -->
+              <div
+                class="max-w-md mx-auto px-5 pt-12 pb-10 flex flex-col gap-16 justify-between text-blk-500 border border-blk-500 lg:max-w-max lg:mx-0"
+              >
+                <p class="lg:max-w-[17.5rem]">
+                  Ever since I discovered the app, its has been such a seemless
+                  way to make payment.
+                </p>
+                <div class="flex gap-4 items-start">
+                  <!-- image container -->
+                  <div
+                    class="w-12 h-12 rounded-full bg-chika bg-center bg-cover"
+                  ></div>
+                  <div class="w-[calc(100%-4rem)]">
+                    <h4 class="mb-1 text-base font-semibold">Chika Nnodi</h4>
+                    <div class="flex justify-between">
+                      <p class="text-sm">Customer Care Rep.</p>
+                      <!-- star container -->
+                      <div class="flex">
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                        <div class="h-4 w-4 bg-star bg-cover bg-center"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- dots -->
+            <div class="hidden gap-1 max-w-max mx-auto lg:flex">
+              <div class="w-2 h-2 bg-bg-dot rounded-full"></div>
+              <div class="w-2 h-2 bg-blk-900 rounded-full"></div>
+              <div class="w-2 h-2 bg-bg-dot rounded-full"></div>
+              <div class="w-2 h-2 bg-bg-dot rounded-full"></div>
+              <div class="w-2 h-2 bg-bg-dot rounded-full"></div>
+            </div>
+          </div>
+          <!-- arrow right -->
+          <svg
+            class="hidden lg:block"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.7459 19.7589C7.44784 19.4667 7.42074 19.0095 7.66461 18.6873L7.7459 18.595L14.4734 12L7.7459 5.40503C7.44784 5.11283 7.42074 4.65558 7.66461 4.33338L7.7459 4.24106C8.04396 3.94887 8.51037 3.9223 8.83904 4.16137L8.93321 4.24106L16.2541 11.418C16.5522 11.7102 16.5793 12.1675 16.3354 12.4897L16.2541 12.582L8.93321 19.7589C8.60534 20.0804 8.07376 20.0804 7.7459 19.7589Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET STARTED -->
+    <section class="mb-8 md:mb-16">
+      <!-- global container -->
+      <div class="glb-cont">
+        <div class="bg-bg-7 px-4 pt-12 pb-4 rounded-xl md:hidden">
+          <h2 class="text-white mb-4">Get Started Today</h2>
+          <p class="text-white mb-9">
+            Download app on your device to unlock various tools for money
+            transfer and management.
+          </p>
+          <img src="./images/play-apple-store.png" alt="google apple store" />
+        </div>
+        <img
+          src="./images/get-started-today.png"
+          alt="get started"
+          class="hidden mx-auto md:block"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-bg-footer text-white">
+      <div class="glb-cont max-w-4xl py-16 flex flex-col">
+        <!-- newsletter -->
+        <div
+          class="mb-20 self-center space-y-8 items-center gap-8 md:flex md:space-y-0"
+        >
+          <p class="font-dms text-xl text-center md:text-left lg:text-2xl">
+            Join our newsletter
+          </p>
+          <div
+            class="font-dms mb-24 bg-white py-2 px-3 w-[calc(80vw-60px)] flex flex-col gap-8 rounded-md md:w-auto md:flex-row lg:min-w-[30rem]"
+          >
+            <input
+              type="text"
+              class="text-blk-900 px-3 py-2 block flex-grow focus:outline-none"
+              placeholder="Enter email address"
+            />
+            <button
+              type="submit"
+              class="bg-bg-footer py-2 px-7 rounded-md duration-300 hover:bg-gray-500"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- Footer items -->
+        <div
+          class="mb-16 flex flex-wrap flex-col gap-y-6 md:flex-row md:justify-between"
+        >
+          <!-- footer item 1 -->
+          <ul
+            class="text-sm font-mont flex flex-col items-center md:items-start"
+          >
+            <h4 class="mb-5 text-lg font-bold lg:text-2xl">Monee</h4>
+            <li class="mb-2 max-w-[9.5rem] text-center md:text-left">
+              Follow us on our social media platforms
+            </li>
+            <li class="mb-2 font-semibold">Culture</li>
+          </ul>
+
+          <!-- footer item 2 -->
+          <ul
+            class="text-sm font-mont font-semibold flex-none flex flex-col items-center md:items-start"
+          >
+            <h4 class="mb-5 text-lg font-bold lg:text-2xl">Company</h4>
+            <li class="mb-2">About us</li>
+            <li class="mb-2">Career</li>
+            <li class="mb-2">Blog</li>
+            <li class="mb-2">Contact us</li>
+          </ul>
+
+          <!-- footer item 3 -->
+          <ul
+            class="text-sm font-mont font-semibold flex-none flex flex-col items-center md:items-start"
+          >
+            <h4 class="mb-5 text-lg font-bold lg:text-2xl">Legal</h4>
+            <li class="mb-2">Privacy</li>
+            <li class="mb-2">Security</li>
+            <li class="mb-2">Terms</li>
+          </ul>
+
+          <!-- footer item 4 -->
+          <ul
+            class="text-sm font-mont font-semibold flex-none flex flex-col items-center md:items-start"
+          >
+            <h4 class="mb-5 text-lg font-bold lg:text-2xl">Our Services</h4>
+            <li class="mb-2">Help center</li>
+            <li class="mb-2">Investment</li>
+            <li class="">FAQs</li>
+          </ul>
+        </div>
+
+        <!-- line -->
+        <div class="w-full max-w-2xl mx-auto mb-8 border border-white"></div>
+        <p class="text-sm font-mont font-medium text-center">
+          Copyrights 2023.All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -3,14 +3,55 @@
 @tailwind base;
 @tailwind components;
 
+@layer base {
+  h2 {
+    @apply text-3xl lg:text-[2.5rem] font-semibold;
+  }
+}
+
 @layer components {
   .btn {
-    @apply rounded-lg border border-black bg-black px-6 py-2 text-lg text-white hover:border-transparent hover:bg-gray-500 xl:px-10 xl:py-4 xl:text-2xl;
+    @apply rounded-lg border border-black bg-black px-6 py-2 text-lg text-white duration-300 hover:border-transparent hover:bg-gray-500 xl:px-10 xl:py-4 xl:text-2xl;
   }
 }
 
 .glb-cont {
   @apply mx-auto max-w-screen-2xl px-6 lg:px-20;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  @apply relative cursor-pointer w-6 h-6 duration-[250ms];
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  @apply absolute w-6 h-0.5 top-0 left-0 bg-black duration-500;
+}
+
+.hamburger-middle {
+  @apply translate-y-[7px];
+}
+
+.hamburger-bottom {
+  @apply translate-y-[14px];
+}
+
+.open.hamburger {
+  @apply fixed right-6 top-12;
+}
+
+.open .hamburger-top {
+  @apply rotate-45 translate-y-[6px]  translate-x-[6px];
+}
+
+.open .hamburger-bottom {
+  @apply -rotate-45 translate-y-[6px]  translate-x-[6px];
+}
+
+.open .hamburger-middle {
+  @apply hidden;
 }
 
 @tailwind utilities;
